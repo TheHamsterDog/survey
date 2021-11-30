@@ -1,0 +1,136 @@
+.button {
+    animation: moveInBottom 1s;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 20px;
+    display: inline-block;
+    position: relative;
+    border-radius: 100px;
+
+    @include respond(phone) {
+        border-radius: 6rem;
+        text-align: center;
+        font-size: 3.2rem;
+       
+    
+    }
+
+    @include respond(tablet-landscape) {
+        border-radius: 8rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    @include respond(tablet) {
+        border-radius: 75px;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    @include respond(big-desktop) {
+        border-radius: 110px;
+        font-size:3.2rem;
+        text-align: center;
+    }
+
+    &:active {
+        transform: translate(0, -4px)
+    }
+
+    &-white {
+        background-color: $colorWhite;
+        color: $colorGrey;
+
+        &::after {
+            background-color: $colorWhite;
+        }
+
+    }
+
+    &-orange {
+        background-color: $colorSecondaryDark;
+        outline: 0;
+        border: 0;
+        color: $colorWhite;
+
+        &::after {
+            background-color: $colorSecondaryDark;
+        }
+
+    }
+
+    &-green {
+        outline: 0;
+        border: 0;
+        background-color: $colorPrimaryLight;
+        color: $colorWhite;
+
+        &::after {
+            background-color: $colorPrimaryLight;
+        }
+
+    }
+
+    &:link,
+    :visited {
+
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        transform: translate(0, -3px);
+        box-shadow: 0 5px 10px rgba($colorBlack, 0.2);
+
+        &::after {
+
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0
+        }
+    }
+
+    &::after {
+        content: " ";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.4s;
+        z-index: -1;
+    }
+}
+
+
+.button-text {
+    font-size: 1.6rem;
+    text-decoration: underline solid $colorPrimaryDark;
+    color: $colorPrimary;
+    &:active,
+    &:link,
+
+    &:visited {
+
+        font-size: 2rem;
+        text-decoration: none;
+        padding-bottom: 20px;
+        border-bottom: 3px solid $colorPrimary;
+
+        color: $colorPrimary;
+        padding: 3px;
+
+    }
+
+    &:hover {
+        transition: all 0.3s;
+        background-color: $colorPrimary;
+        color: $colorWhite;
+        box-shadow: 0 1rem 2rem rgba($colorBlack, 0.25);
+        transform: translateY(-2px);
+    }
+
+
+}

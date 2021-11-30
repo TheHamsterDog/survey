@@ -1,0 +1,61 @@
+.form-button{
+    padding-left: 33.5%;
+    // transform: translateX( -50%);
+    // padding-right:25%;
+    // width: 100%;
+    @include respond(phone){
+        padding-left: 0
+    }
+}
+.auth-form {
+   
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 0rem;  overflow: hidden;
+    &-container{
+        overflow: hidden;
+        width: 100%;
+        // position: absolute;
+        // top:-50%;
+        padding-top:10rem;
+        padding-bottom:10rem;
+        // background-color: $colorPrimary;
+        padding-right:40rem;
+        padding-left:20rem;
+        @include respond(phone){
+            padding-right:5rem;
+        padding-left:5rem;
+        }
+        background-image: linear-gradient(75deg, rgba($colorSecondaryDark,0.6) 0%, rgba($colorSecondaryLight,0.6) 50%, transparent 50%), url('img/nat-5.jpg');
+        background-size:cover;
+
+        // background-image: linear-gradient(105deg, $colorPrimary 0%, $colorPrimaryDark 25%, $colorPrimaryDark 50%, $colorTertiaryLight 50%,$colorTertiaryLight 75%, $colorSecondaryDark 75%);
+        // transform:translate(-50%, -50%);
+    }
+}
+
+.auth-header {
+    background-image: linear-gradient(105deg, rgba($colorTertiaryDark,0.6) 0%, rgba($colorTertiaryLight,0.6) 57%);
+    padding-top:7rem;
+    height:20rem;
+    width: 100%;
+
+    color:transparent;
+   
+    // background-size: cover;
+    &-heading{
+        color:Transparent;
+        background-image: linear-gradient(105deg, rgba($colorSecondaryDark,0.6) 0%, rgba($colorSecondaryLight,0.6) 50%, transparent 50%), url('img/nat-5.jpg');
+        -webkit-background-clip: text ;
+// width:50%;
+// margin-left:15rem;
+font-size: 5rem;
+text-align:center;
+        // background-color: $colorSecondaryLight;
+    }
+
+  
+    // background-color: $colorPrimary;
+
+}

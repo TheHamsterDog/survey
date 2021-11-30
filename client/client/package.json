@@ -1,0 +1,76 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.62",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.5",
+    "antd": "^4.6.5",
+    "axios": "^0.20.0",
+    "cloudinary-react": "^1.6.6",
+    "image-to-base64": "^2.1.1",
+    "material-ui": "^0.20.2",
+    "material-ui-dropzone": "^3.5.0",
+    "material-ui-image": "^3.3.0",
+    "node-sass": "^5.0.0",
+    "pure-react-carousel": "^1.27.4",
+    "react": "^16.13.1",
+    "react-chartjs-2": "^2.11.1",
+    "react-dom": "^16.13.1",
+    "react-grid-system": "^7.1.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.1.0",
+    "react-images-upload": "^1.2.8",
+    "react-infinite-scroll-component": "^5.1.0",
+    "react-meta-tags": "^0.7.4",
+    "react-redux": "^7.2.1",
+    "react-responsive-carousel": "^3.2.10",
+    "react-reveal": "^1.2.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "react-slick": "^0.27.11",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.7.5",
+    "uuid": "^8.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start ",
+    "style": "node-sass src/sass/main.scss src/index.css -w",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.0"
+  }
+}

@@ -1,0 +1,120 @@
+.nav{
+    &-button{
+        position: fixed;
+        z-index: 100;
+        right: 5%;
+        top:5%;
+
+    }
+    &-bar{
+        position: fixed;
+        z-index:100;
+        width:100%;
+        background-color: rgba($colorGreyLight, 0.8);
+        left:80%;
+        height: 100%;
+        top:0%;
+        // visibility: hidden;
+        // opacity: 0;
+        // display: none;
+        transform: translateX(100%);
+        &-list{
+            // position: absolute;
+            text-decoration: none;
+            margin-top: 25rem;
+            transform: translateX(50px);
+            // margin-right: 2.5rem;
+            list-style-type: none;
+            // top:-50%;
+            // top:50%;
+            // left:50%;
+            &-item{
+                color: $colorSecondaryDark;
+                font-weight: 900;
+                &:not(:last-child){
+                    margin-bottom: 1rem;
+                }
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 2.2rem;
+                &:hover{
+                    transition: all 0.3s;
+                    transform: scale(1.2) translateX(6%)
+                }
+            }
+            // transform: translate(-50%, -50%);
+        }
+    }
+    &-close{
+        
+        color:$colorBlack;
+        font-family: 'Courier New', Courier, monospace;
+        z-index:101;
+        position: fixed;
+        font-size:5rem;
+        left:81%;
+        top:2%;
+        opacity: 0;
+        transform: translate(2000%, 0)
+        // display: none;
+        // visibility: hidden;
+        // transform: translateX(100%);
+    }
+    &-check{
+        visibility: hidden;
+        display: none;
+      
+    }
+    &-check:checked ~ &-background{
+        // visibility: visible;
+        display: block;
+        // opacity: 1;
+        // transform: translate(0, 0);
+
+    }
+    &-check:checked ~ &-bar{
+        // visibility: visible;
+        display: block;
+       transition: all .6s;
+      
+         // opacity: 0;
+        //  display: none;
+         transform: translateX(0);
+         @include respond(phone){
+             transform: translateX(-20rem)
+         }
+        // opacity: 1;
+        // transform: translate(0, 0);
+
+    }
+    &-check:checked ~ &-close{
+        transition: all .6s;
+        transform: translateX(0);
+        // display: block;
+        opacity: 1;
+       
+        
+
+    }
+    &-check:checked ~ &-button{
+        // transition: all 2s;
+        display: none;
+        // opacity: 1;
+       
+        
+
+    }
+    &-background{
+        background-color: rgba($colorBlack, 0.4);
+        z-index: 90;
+        position: fixed;
+        display: none;
+        // opacity: 0;
+        // visibility: hidden;
+        height: 100%;
+        width:100%;
+        // position: absolute;
+        // top:0;
+        // right:0;
+        // transform: translate(100%, 0);
+    }
+}
