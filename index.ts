@@ -20,6 +20,7 @@ app.use('/api/post', post);
 // app.use(helmet());
 // app.use(cors());
 app.use(express.static(path.join(__dirname, 'build')))
+
 app.get('*', (req: any, res: any) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'))
 });
