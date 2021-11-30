@@ -23,7 +23,7 @@ const Home = (props: any) => {
           <h3 className='landing-header-title-sub'>Faster than the wind</h3>
         </div>
         <div className='landing-header-video'>
-          <video loop muted autoPlay src="/landing-header-video.mp4" className="landing-header-video-content">
+          <video loop muted autoPlay src="https://raw.githubusercontent.com/TheHamsterDog/survey/main/build/landing-header-video.mp4" className="landing-header-video-content">
             {/* <source src='/landing-header-video.mp4' type='video/mp4' /> */}
 
           </video>
