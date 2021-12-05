@@ -103,7 +103,7 @@ router.get('/resend/:id', async (req: any, res: any) => {
       await verifcation.save();
 
       var transporter = nodemailer.createTransport(sendGrid({ apiKey: process.env.sendgrid }));
-      var mailOptions = { from: 'noreply.paymate1@gmail.com', to: user.email, subject: 'Account Verification Token', html: emailVerification(verifcation.token) };
+      var mailOptions = { from: 'personal@shreshthverma.me', to: user.email, subject: 'Account Verification Token', html: emailVerification(verifcation.token) };
       const mail = await transporter.sendMail(mailOptions);
       console.log(verifcation);
 
@@ -112,7 +112,7 @@ router.get('/resend/:id', async (req: any, res: any) => {
     else {
       const user = await User.findById(id);
       var transporter = nodemailer.createTransport(sendGrid({ apiKey: process.env.sendgrid }));
-      var mailOptions = { from: 'noreply.paymate1@gmail.com', to: user.email, subject: 'Account Verification Token', html: emailVerification(token.token) };
+      var mailOptions = { from: 'personal@shreshthverma.me', to: user.email, subject: 'Account Verification Token', html: emailVerification(token.token) };
       const mail = await transporter.sendMail(mailOptions);
       return res.json({ msg: 'Email has been resent' })
     }
@@ -141,7 +141,7 @@ router.post('/forgotpassword/', [check('email', 'please specify your email accou
           charset: 'alphabetic'
         })), user: user._id
       });
-      var mailOptions = { from: 'noreply.paymate1@gmail.com', to: user.email, subject: 'Password Reset', html: forgot(FP.token) };
+      var mailOptions = { from: 'personal@shreshthverma.me', to: user.email, subject: 'Password Reset', html: forgot(FP.token) };
       await transporter.sendMail(mailOptions);
       console.log('====================================');
       console.log('Forgot Route');

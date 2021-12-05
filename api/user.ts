@@ -55,7 +55,7 @@ router.post('/', [check('username', "name is required").not().isEmpty(), check('
           }, process.env.jwt);
           const verifcation = new Verification({ token: md5(uniqid()), user: user._id });
           var transporter = nodemailer.createTransport(sendGrid({ apiKey: process.env.sendgrid }));
-          var mailOptions = { from: 'noreply.paymate1@gmail.com', to: user.email, subject: 'Account Verification Token', html: emailVerification(verifcation.token) };
+          var mailOptions = { from: 'personal@shreshthverma.me', to: user.email, subject: 'Account Verification Token', html: emailVerification(verifcation.token) };
           const mail = await transporter.sendMail(mailOptions);
           await verifcation.save();
           return res.json({ token: token })
@@ -100,7 +100,7 @@ router.put('/', [auth, check('username', "name is required").not().isEmpty(), ch
     const verifcation = new Verification({ token: md5(uniqid() + user.email + randomstring.generate()), user: user._id });
     await verifcation.save();
     var transporter = nodemailer.createTransport(sendGrid({ apiKey: process.env.sendgrid }));
-    var mailOptions = { from: 'noreply.paymate1@gmail.com', to: user.email, subject: 'Account Verification Token', html: emailVerification(verifcation.token) };
+    var mailOptions = { from: 'personal@shreshthverma.me', to: user.email, subject: 'Account Verification Token', html: emailVerification(verifcation.token) };
     await transporter.sendMail(mailOptions);
     user.userName = req.body.username;
     user.image = req.body.image;
